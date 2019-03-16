@@ -4,9 +4,7 @@ class Logo extends React.PureComponent {
 
   render() {
     return (
-      <a href="#">
-        Hi, I am Logo (Pure Component)
-      </a>
+      <a href="#" className="logo">netflixroulette</a>
     )
   }
 }

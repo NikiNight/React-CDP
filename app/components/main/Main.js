@@ -1,9 +1,19 @@
 import React from 'react';
+import SortLine from './SortLine';
+import MoviesList from './MoviesList';
+import NoMovies from './NoMovies';
+
 
 class Main extends React.Component {
     render() {
         return (
-            <div>Hi, I am Main (React.Component)</div>
+            <main>
+                <SortLine/>
+                <div className="wrapper">
+                    <MoviesList/>
+                    <NoMovies/>
+                </div>
+            </main>
         )
     }
 }

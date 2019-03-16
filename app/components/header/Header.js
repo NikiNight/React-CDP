@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import Logo from '../common/Logo';
+import MovieFounded from './MovieFounded';
+import MovieSearch from './MovieSearch';
+import HeaderLine from './HeaderLine';
  
-const Header = () => {
-    return (
-        <header>
-            <Logo/>
-            <p>Hi, I am header (Functional component)</p>
-        </header>
-    )
+class Header extends React.Component {
+    render() {
+        return (
+            <header className="header">
+                <div className="wrapper">
+                    <HeaderLine/>
+                    <MovieSearch/>
+                    <MovieFounded/>
+                </div>
+            </header>
+        )
+    }
 }
 
 export default Header;

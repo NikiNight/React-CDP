@@ -1,0 +1,17 @@
+.sort-line {
+    background-color: $color-grey-light;
+    font-size: 1.8rem;
+    font-weight: 700;
+    .wrapper {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.sort-line__selectors {
+    .button_minimal {
+        margin-left: 20px;
+    }
+}

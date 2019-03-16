@@ -1,0 +1,36 @@
+.movie-search {
+    h1 {
+        font-size: 3rem;
+        color: $color-light;
+    }
+}
+
+.movie-search__input {
+    width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 3px solid $color-brand;
+    color: $color-light;
+    font-weight: 700;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.movie-search__buttons-line {
+    display: flex;
+    justify-content: space-between;
+    color: $color-light;
+    font-weight: 700;
+}
+
+.movie-search__buttons {
+    .button {
+        margin-left: 10px;
+        padding: 5px 20px;
+        background-color: $color-grey-dark;
+        &_active {
+            background-color: $color-brand;
+        }
+    }
+}

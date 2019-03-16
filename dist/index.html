@@ -5,10 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React CDP App</title>
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+<link href="style.css?d4a60c9034ce583e3252" rel="stylesheet"></head>
 
 <body>
     <div id="root"></div>
-<script type="text/javascript" src="index_bundle.js?a235f344da9db44714af"></script></body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-line">
+                <a href="#" class="logo">netflixroulette</a>
+                <button class="button button_reverse">Search</button>
+            </div>
+            <div class="movie-search">
+                <h1>Find your movie</h1>
+                <input type="text" name="movie" class="movie-search__input">
+                <div class="movie-search__buttons-line">
+                    <div class="movie-search__buttons">
+                        <span>Search by</span>
+                        <button class="button">Title</button>
+                        <button class="button">Genre</button>
+                    </div>
+                    <button class="button">Search</button>
+                </div>
+            </div>
+            <div class="movie-founded">
+                <img src="https://via.placeholder.com/300x400.jpg?text=Movie%20Cover" alt="" class="movie-founded__image">
+                <div class="movie-founded__description">
+                    <div class="movie-founded__title">
+                        <h1>Pulp fiction</h1>
+                        <span class="movie-founded__rating">4.5</span>
+                    </div>
+                    <p class="movie-founded__category">
+                        Oscar-winning movies
+                    </p>
+                    <div class="movie-founded__info">
+                        <p class="movie-founded__year">1994</p>
+                        <p class="movie-founded__duration">154 min</p>
+                    </div>
+                    <p class="movie-founded__about">
+                        Est est explicabo ipsa voluptas sunt necessitatibus. Maxime eligendi saepe sunt nam labore aut unde distinctio distinctio. Nemo expedita aliquam molestiae officiis praesentium ut atque et saepe. Eaque alias illo nam quia dicta. Aut asperiores ut aliquid.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="sort-line">
+                <p class="sort-line__movies-num">
+                    7 movies found
+                </p>
+                <div class="sort-line__selectors">
+                    Sort by 
+                    <span class="button_minimal">release date</span>
+                    <span class="button_minimal">raing</span>
+                </div>
+            </div>
+            <div class="movies-list">
+                <article class="movie">
+                    <img src="https://via.placeholder.com/300x400.jpg?text=Movie%20Cover" alt="" class="movie__image">
+                    <div class="movie__description">
+                        <div>
+                            <h2 class="movie__title">Jackie Brown</h2>
+                            <p class="movie__category">Drama</p>
+                        </div>
+                        <p class="movie__year">1994</p>
+                    </div>
+                </article>
+            </div>
+            <div class="no-movies">
+                <p class="no-movies__title">No films found</P>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <a href="#" class="logo">netflixroulette</a>
+        </div>
+    </footer>
+<script type="text/javascript" src="index_bundle.js?d4a60c9034ce583e3252"></script></body>
 
 </html>
