@@ -1,9 +1,11 @@
 .movie-founded {
     display: flex;
+    align-items: flex-start;
 }
 
 .movie-founded__image {
     margin-right: 60px;
+    max-width: 300px;
 }
 
 .movie-founded__description {

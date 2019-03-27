@@ -1,5 +1,20 @@
 .movie {
     width: 30%;
+    margin-bottom: 40px;
+    cursor: pointer;
+    &:hover {
+        .movie__year {
+            background-color: $color-brand;
+            color: $color-light;
+        }
+
+        .movie__image-wrapper {
+            &:after {
+                background-color: rgba($color: #000000, $alpha: .3);
+            }
+        } 
+
+    }
 }
 
 .movie__description {
@@ -8,10 +23,23 @@
     align-items: center;
 }
 
+.movie__image-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+    }
+}
+
 .movie__image {
     width: 100%;
     display: block;
-    margin-bottom: 10px;
 }
 
 .movie__title {
@@ -21,4 +49,5 @@
 .movie__year {
     border: 1px solid $color-grey-dark;
     padding: 3px 5px;
+    transition: .3s;
 }

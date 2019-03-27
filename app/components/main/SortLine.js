@@ -1,18 +1,32 @@
 import React from 'react';
 
 class SortLine extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div className="sort-line">
                 <div className="wrapper">
                     <p className="sort-line__movies-num">
-                        7 movies found
+                        {this.props.moviesNum} movies found
                     </p>
-                    <div className="sort-line__selectors">
-                        Sort by 
-                        <span className="button_minimal button_minimal_active">release date</span>
-                        <span className="button_minimal">raing</span>
-                    </div>
+                    {
+                        this.props.moviesNum>1 &&
+                        <div className="sort-line__selectors">
+                            Sort by 
+                            <span 
+                                className={`button_minimal ${this.props.activeSort === 'Date' ? 'button_minimal_active' : ''}`} 
+                                onClick={() => this.props.toogleSorting('Date')}
+                            >release date</span>
+                            <span 
+                                className={`button_minimal ${this.props.activeSort === 'Rating' ? 'button_minimal_active' : ''}`}
+                                onClick={() => this.props.toogleSorting('Rating')}
+                            >raiting</span>
+                        </div>
+                    }
                 </div>
             </div>
         )

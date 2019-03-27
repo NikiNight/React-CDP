@@ -11,4 +11,7 @@ body {
 .wrapper {
     max-width: 1170px;
     margin: auto;
+    &_error {
+        text-align: center;
+    }
 }

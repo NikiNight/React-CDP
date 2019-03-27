@@ -1,20 +1,20 @@
 import React from 'react';
 
-class Movie extends React.Component {
-    render() {
-        return (
-            <article className="movie">
-                <img src="https://via.placeholder.com/300x400.jpg?text=Movie%20Cover" alt="" className="movie__image" />
-                <div className="movie__description">
-                    <div>
-                        <h2 className="movie__title">Jackie Brown</h2>
-                        <p className="movie__category">Drama</p>
-                    </div>
-                    <p className="movie__year">1994</p>
+const Movie = (props) => {
+    return (
+        <article className="movie" onClick={() => props.selectMovie(props.id)}>
+            <div className="movie__image-wrapper">
+                <img src={props.src} alt="" className="movie__image" />
+            </div>
+            <div className="movie__description">
+                <div>
+                    <h2 className="movie__title">{props.title}</h2>
+                    <p className="movie__category">{props.genre}</p>
                 </div>
-            </article>
-        )
-    }
+                <p className="movie__year">{props.year}</p>
+            </div>
+        </article>
+    )
 }
 
 export default Movie;

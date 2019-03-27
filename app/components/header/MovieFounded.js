@@ -1,29 +1,28 @@
 import React from 'react';
 
-class MovieFounded extends React.Component {
-    render() {
-        return (
-            <div className="movie-founded">
-                <img src="https://via.placeholder.com/300x400.jpg?text=Movie%20Cover" alt="" className="movie-founded__image" />
-                <div className="movie-founded__description">
-                    <div className="movie-founded__title">
-                        <h1>Pulp fiction</h1>
-                        <span className="movie-founded__rating">4.5</span>
-                    </div>
-                    <p className="movie-founded__category">
-                        Oscar-winning movies
-                    </p>
-                    <div className="movie-founded__info">
-                        <p className="movie-founded__year">1994</p>
-                        <p className="movie-founded__duration">154 min</p>
-                    </div>
-                    <p className="movie-founded__about">
-                        Est est explicabo ipsa voluptas sunt necessitatibus. Maxime eligendi saepe sunt nam labore aut unde distinctio distinctio. Nemo expedita aliquam molestiae officiis praesentium ut atque et saepe. Eaque alias illo nam quia dicta. Aut asperiores ut aliquid.
-                    </p>
+const MovieFounded = (props) => {
+
+    return (
+        <div className="movie-founded">
+            <img src={props.selectedMovie.poster_path} alt="" className="movie-founded__image" />
+            <div className="movie-founded__description">
+                <div className="movie-founded__title">
+                    <h1>{props.selectedMovie.title}</h1>
+                    <span className="movie-founded__rating">{props.selectedMovie.vote_average}</span>
                 </div>
+                <p className="movie-founded__category">
+                    {props.selectedMovie.genres.join(', ')}
+                </p>
+                <div className="movie-founded__info">
+                    <p className="movie-founded__year">{props.selectedMovie.release_date.slice(0, 4)}</p>
+                    <p className="movie-founded__duration">{props.selectedMovie.runtime}</p>
+                </div>
+                <p className="movie-founded__about">
+                    {props.selectedMovie.overview}
+                </p>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default MovieFounded;

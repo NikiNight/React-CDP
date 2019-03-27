@@ -1,12 +1,9 @@
 import React from 'react';
 
-class Logo extends React.PureComponent {
-
-  render() {
-    return (
-      <a href="#" className="logo">netflixroulette</a>
-    )
-  }
+const Logo = () => {
+  return (
+    <a href="#" className="logo">netflixroulette</a>
+  )
 }
 
 export default Logo;
