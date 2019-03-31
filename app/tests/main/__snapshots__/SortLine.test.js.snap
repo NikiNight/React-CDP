@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test SortLine component SortLine matches snapshot 1`] = `
+<div
+  className="sort-line"
+>
+  <div
+    className="wrapper"
+  >
+    <p
+      className="sort-line__movies-num"
+    >
+       movies found
+    </p>
+  </div>
+</div>
+`;

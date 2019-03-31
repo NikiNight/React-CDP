@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="header-line"
+    >
+      <a
+        className="logo"
+        href="#"
+      >
+        netflixroulette
+      </a>
+    </div>
+    <div
+      className="movie-search"
+    >
+      <h1>
+        Find your movie
+      </h1>
+      <input
+        className="movie-search__input"
+        name="movie"
+        type="text"
+      />
+      <div
+        className="movie-search__buttons-line"
+      >
+        <div
+          className="movie-search__buttons"
+        >
+          <span>
+            Search by
+          </span>
+          <button
+            className="button button_active"
+            onClick={[Function]}
+            value="Title"
+          >
+            Title
+          </button>
+          <button
+            className="button "
+            onClick={[Function]}
+            value="Genre"
+          >
+            Genre
+          </button>
+        </div>
+        <button
+          className="button button_search"
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;

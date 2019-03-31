@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Movie component Movie matches snapshot 1`] = `
+<article
+  className="movie"
+  onClick={[Function]}
+>
+  <div
+    className="movie__image-wrapper"
+  >
+    <img
+      alt=""
+      className="movie__image"
+    />
+  </div>
+  <div
+    className="movie__description"
+  >
+    <div>
+      <h2
+        className="movie__title"
+      />
+      <p
+        className="movie__category"
+      />
+    </div>
+    <p
+      className="movie__year"
+    />
+  </div>
+</article>
+`;

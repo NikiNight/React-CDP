@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test NoMovies component NoMovies matches snapshot 1`] = `
+<div
+  className="no-movies"
+>
+  <p
+    className="no-movies__title"
+  >
+    No films found
+  </p>
+</div>
+`;

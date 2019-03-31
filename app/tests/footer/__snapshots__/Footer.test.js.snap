@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="wrapper"
+  >
+    <a
+      className="logo"
+      href="#"
+    >
+      netflixroulette
+    </a>
+  </div>
+</footer>
+`;

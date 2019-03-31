@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HeaderLine component matches snapshot 1`] = `
+<div
+  className="header-line"
+>
+  <a
+    className="logo"
+    href="#"
+  >
+    netflixroulette
+  </a>
+  <button
+    className="button button_reverse"
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;
