@@ -1,11 +1,22 @@
 import React from 'react';
 import Movie from './Movie';
+import { connect } from 'react-redux';
+import { selectMovie } from '../../store/actions/actions'
 
 class MoviesList extends React.Component {
 
     constructor(props) {
         super(props);
         this.sortMoviesList = this.sortMoviesList.bind(this);
+        this.selectMovie = this.selectMovie.bind(this);
+    }
+
+    selectMovie(id) {
+        this.props.selectMovie(id);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     }
 
     sortMoviesList() {
@@ -44,7 +55,7 @@ class MoviesList extends React.Component {
                             genre={movieProps.genres.join(', ')}
                             year={movieProps.release_date.slice(0, 4)}
                             id={movieProps.id}
-                            selectMovie={this.props.selectMovie}
+                            selectMovie={this.selectMovie}
                             key={movieProps.id}
                         />
                     )
@@ -54,4 +65,15 @@ class MoviesList extends React.Component {
     }
 }
 
-export default MoviesList;
+function mapStateToProps (state) {
+    const {  selectedMovieId, isMovieSelected } = state;
+    return { isMovieSelected: isMovieSelected, selectedMovieId: selectedMovieId }
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    selectMovie: (id) => dispatch(selectMovie(id))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MoviesList);

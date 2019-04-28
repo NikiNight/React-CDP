@@ -1,6 +1,7 @@
 import React from 'react';
 import MoviesList from './../../components/main/MoviesList';
 import Movie from './../../components/main/Movie';
+import "babel-polyfill";
 import {shallow, mount} from 'enzyme';
 
 describe('Test MoviesList component', () => {

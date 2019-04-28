@@ -11,7 +11,7 @@ module.exports = (env, options) => {
         mode: isProduction ? "production" : "development",
         devtool: isProduction ? "none" : "source-map",
         watch: isProduction ? false : true,
-        entry: ["./app/index.js", './app/css/main.scss'],
+        entry: ['babel-polyfill', "./app/index.js", './app/css/main.scss'],
         output: {
             path: path.join(__dirname, "/dist"),
             filename: "index_bundle.js"

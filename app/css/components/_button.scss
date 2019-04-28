@@ -25,6 +25,11 @@
     &_search {
         width: 200px;
     }
+
+    &_disabled {
+        background-color: $color-grey-dark;
+        cursor: auto;
+    }
 }
 
 .button_minimal {

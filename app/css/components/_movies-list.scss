@@ -4,6 +4,9 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    main.loading & {
+        height: 200px;
+    }
     &:after {
         content: "";
         flex-basis: 30%;
