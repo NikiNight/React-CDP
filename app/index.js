@@ -8,6 +8,8 @@ import rootReducer from './store/reducers/reducers';
 import { persistStore, persistReducer } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 import storage from 'redux-persist/lib/storage';
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
 
 const root = document.getElementById('root');
 
@@ -20,6 +22,8 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = createStore(persistedReducer, applyMiddleware(thunk));
 export const persistor = persistStore(store);
 
+export const history = createBrowserHistory();
+
 if (module.hot) {
     module.hot.accept();
 }
@@ -27,8 +31,10 @@ if (module.hot) {
 ReactDOM.render(
     <Provider store={store}>
         <PersistGate persistor={persistor}>
-            <App />
-            </PersistGate>
+            <Router history={history}>
+                <App />
+            </Router>
+        </PersistGate>
     </Provider>,
     root
 );

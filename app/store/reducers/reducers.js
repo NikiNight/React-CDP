@@ -10,7 +10,7 @@ import {
 
 const initialState = {
   loading: false,
-  selectedMovieId: null,
+  selectedMovie: {},
   savedMovies: {},
   sorting: 'Date',
   query: {
@@ -28,7 +28,7 @@ const reducers = (state = initialState, action) => {
       case SELECT_MOVIE: 
         return {
           ...state,
-          selectedMovieId: action.payload,
+          selectedMovie: action.payload,
         };
       case SAVE_REQUEST_PARAM:
         return {

@@ -1,11 +1,6 @@
 import * as types from './actionsTypes';
 import Axios from 'axios';
-import { store } from '../../index'
-
-export const selectMovie = (id) => ({ 
-  type: types.SELECT_MOVIE, 
-  payload: id
-})
+import { store, history } from '../../index';
 
 export const saveRequestParam = (param, value) => {
   return {
@@ -63,9 +58,32 @@ export const requestMovies = parametres => (dispatch) => {
     .map(v => `${v[0]}=${v[1]}`)
     .join('&');
 
+  const searchText = (store.getState().query.search);
+
   Axios.get(`http://react-cdp-api.herokuapp.com/movies/?${formattedParametres}`)
     .then(res => {
       dispatch(saveMovies(res.data));
       dispatch(changeLoadingStatus(false));
+      history.push(`/search/${searchText}`);
     });
+};
+
+export const selectMovie = id => (dispatch) => {
+  if (id=="") {
+    dispatch(saveSingleMovie(id));
+    history.push(`/`);
+  } else {
+    Axios.get(`http://react-cdp-api.herokuapp.com/movies/${id}`)
+    .then(res => {
+      dispatch(saveSingleMovie(res.data));
+      history.push(`/film/${id}`);
+    });
+  }
+};
+
+export const saveSingleMovie = (movie) => {
+  return {
+    type: types.SELECT_MOVIE,
+    payload: movie
+  };
 };

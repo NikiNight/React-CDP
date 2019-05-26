@@ -1,7 +1,7 @@
 import React from 'react';
 import Movie from './Movie';
 import { connect } from 'react-redux';
-import { selectMovie } from '../../store/actions/actions'
+import { selectMovie } from '../../store/actions/actions';
 
 class MoviesList extends React.Component {
 
@@ -66,8 +66,8 @@ class MoviesList extends React.Component {
 }
 
 function mapStateToProps (state) {
-    const {  selectedMovieId, isMovieSelected } = state;
-    return { isMovieSelected: isMovieSelected, selectedMovieId: selectedMovieId }
+    const {  selectedMovie, isMovieSelected } = state;
+    return { isMovieSelected: isMovieSelected, selectedMovie: selectedMovie }
 }
 
 function mapDispatchToProps (dispatch) {

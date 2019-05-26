@@ -10,21 +10,10 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.backToSearch = this.backToSearch.bind(this);
-        this.selectMovieById = this.selectMovieById.bind(this);
     }
 
     backToSearch() {
-        this.props.selectMovie(null);
-    }
-
-    selectMovieById() {
-        return this.props.savedMovies.find( x => x.id === this.props.selectedMovieId);
-    }
-
-    componentWillUpdate() {
-        if(this.props.savedMovies.length>0) {
-            this.selectMovieById()
-        };
+        this.props.selectMovie('');
     }
 
     render() {
@@ -32,13 +21,13 @@ class Header extends React.Component {
             <header className="header">
                 <div className="wrapper">
                     <HeaderLine 
-                        isMovieSelected={this.props.selectedMovieId !== null}
+                        isMovieSelected={Object.keys(this.props.selectedMovie).length !== 0}
                         backToSearch={this.backToSearch}
                     />
                     {
-                        this.props.selectedMovieId !== null ?
-                        <MovieFounded selectedMovie={this.selectMovieById()} /> :
-                        <MovieSearch/>
+                        Object.keys(this.props.selectedMovie).length !== 0 ?
+                        <MovieFounded selectedMovie={this.props.selectedMovie} /> :
+                        <MovieSearch />
                     }
                 </div>
             </header>
@@ -53,8 +42,8 @@ function mapDispatchToProps (dispatch) {
 }
 
 function mapStateToProps (state) {
-  const {  selectedMovieId, savedMovies } = state;
-  return { selectedMovieId: selectedMovieId, savedMovies: savedMovies }
+  const {  selectedMovie, savedMovies } = state;
+  return { selectedMovie: selectedMovie, savedMovies: savedMovies }
 }
   
   

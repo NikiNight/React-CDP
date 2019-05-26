@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => {
   return (
-    <a href="#" className="logo">netflixroulette</a>
+    <a href="/" className="logo">netflixroulette</a>
   )
 }
 

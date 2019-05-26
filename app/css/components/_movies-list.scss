@@ -4,6 +4,11 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    // >a {
+    //     width: 30%;
+    //     color: $color-text;
+    //     text-decoration: none;
+    // }
     main.loading & {
         height: 200px;
     }
