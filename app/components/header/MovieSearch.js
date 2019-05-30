@@ -41,7 +41,7 @@ class MovieSearch extends React.Component {
                     {
                         this.props.loading
                         ? <button className="button button_search button_disabled">Loading...</button>
-                        : <button className="button button_search"  onClick={this.searchMovieBy}>Search</button>
+                        : <button className="button button_search" onClick={this.searchMovieBy}>Search</button>
                     }
                 </div>
             </div>

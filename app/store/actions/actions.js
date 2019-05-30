@@ -1,6 +1,7 @@
 import * as types from './actionsTypes';
 import Axios from 'axios';
-import { store, history } from '../../index';
+import { history } from '../../index';
+import store from '../../store/configureStore';
 
 export const saveRequestParam = (param, value) => {
   return {

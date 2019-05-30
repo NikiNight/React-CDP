@@ -4,7 +4,7 @@ import MoviesList from './MoviesList';
 import NoMovies from './NoMovies';
 import { connect } from 'react-redux';
 import { requestMovies, changeSorting } from '../../store/actions/actions'
-import { BrowserRouter as Router, Switch, Redirect, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 class Main extends React.Component {
 
@@ -22,7 +22,6 @@ class Main extends React.Component {
     render() {
         return (
             <main className={`${this.props.loading ? 'loading' : ''}`}>
-            <>
                 <Switch>
                     <Route exact strict path="/" component={() => <NoMovies text="Please, type something to find"/>} />
                     <Route exact path={["/search/:query", "/film/:id"]}>
@@ -45,7 +44,6 @@ class Main extends React.Component {
                     </Route>
                     <Route component={() => <NoMovies text="404"/>}/>
                 </Switch>
-                </>
             </main>
         )
     }
